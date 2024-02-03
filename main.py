@@ -54,7 +54,7 @@ class Kitten:
         print(f"{day:—^80}")
         if self.hunger <= 30:
             self.to_eat()
-        elif self.hunger < 100:
+        elif self.hunger > 100:
             self.hunger = 100
         else:
             random_cube = random.randint(1, 2)
