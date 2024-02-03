@@ -52,8 +52,10 @@ class Kitten:
     def live(self, day):
         d = "Day " + str(day) + " of " + self.name + " life"
         print(f"{day:—^80}")
-        if self.hunger <= 100 and self.hunger <= 30:
+        if self.hunger <= 30:
             self.to_eat()
+        elif self.hunger < 100:
+            self.hunger = 100
         else:
             random_cube = random.randint(1, 2)
             if random_cube == 1:
